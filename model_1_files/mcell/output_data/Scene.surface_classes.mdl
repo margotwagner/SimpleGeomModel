@@ -1,0 +1,19 @@
+DEFINE_SURFACE_CLASSES
+{
+  transp_refrac
+  {
+    TRANSPARENT = ALL_SURFACE_MOLECULES;
+    TRANSPARENT = ca;
+    TRANSPARENT = calbindin_h0m0;
+    TRANSPARENT = calbindin_h0m1;
+    TRANSPARENT = calbindin_h0m2;
+    TRANSPARENT = calbindin_h1m0;
+    TRANSPARENT = calbindin_h1m1;
+    TRANSPARENT = calbindin_h1m2;
+    TRANSPARENT = calbindin_h2m0;
+    TRANSPARENT = calbindin_h2m1;
+    TRANSPARENT = calbindin_h2m2;
+    TRANSPARENT = glu;
+  }
+}
+
