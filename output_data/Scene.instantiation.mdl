@@ -1,0 +1,445 @@
+INSTANTIATE Scene OBJECT
+{
+  a001 OBJECT a001 {}
+  astrocyte OBJECT astrocyte {}
+  d001 OBJECT d001 {}
+  refrac001 OBJECT refrac001 {}
+  pmca_p0_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001[axon_membrane]
+   MOLECULE = pmca_p0'
+   DENSITY = density_pmca_pre*(1-pmca_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  ca_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = ca
+   CONCENTRATION = conc_ca
+   RELEASE_PROBABILITY = 1
+  }
+  pmca_p1_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001[axon_membrane]
+   MOLECULE = pmca_p1'
+   DENSITY = density_pmca_pre*pmca_bound_frac
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h0m0_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h0m0
+   CONCENTRATION = conc_calbindin*calbindin_h0m0_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h0m1_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h0m1
+   CONCENTRATION = conc_calbindin*calbindin_h0m1_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h0m2_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h0m2
+   CONCENTRATION = conc_calbindin*calbindin_h0m2_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h1m0_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h1m0
+   CONCENTRATION = conc_calbindin*calbindin_h1m0_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h1m1_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h1m1
+   CONCENTRATION = conc_calbindin*calbindin_h1m1_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h1m2_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h1m2
+   CONCENTRATION = conc_calbindin*calbindin_h1m2_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h2m0_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h2m0
+   CONCENTRATION = conc_calbindin*calbindin_h2m0_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h2m1_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h2m1
+   CONCENTRATION = conc_calbindin*calbindin_h2m1_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h2m2_pre_rel RELEASE_SITE
+  {
+   SHAPE = Scene.a001
+   MOLECULE = calbindin_h2m2
+   CONCENTRATION = conc_calbindin*calbindin_h2m2_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  pmca_p0_post_spine_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_spine_head] + Scene.d001[dendrite_spine_neck]
+   MOLECULE = pmca_p0'
+   DENSITY = density_pmca_post_spine*(1-pmca_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  pmca_p1_post_spine_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_spine_head] + Scene.d001[dendrite_spine_neck]
+   MOLECULE = pmca_p1'
+   DENSITY = density_pmca_post_spine*(pmca_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  pmca_p0_post_shaft_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_shaft_membrane]
+   MOLECULE = pmca_p0'
+   DENSITY = density_pmca_post_shaft*(1-pmca_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  pmca_p1_post_shaft_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_shaft_membrane]
+   MOLECULE = pmca_p1'
+   DENSITY = density_pmca_post_shaft*(pmca_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  ca_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = ca
+   CONCENTRATION = conc_ca
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h0m0_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h0m0
+   CONCENTRATION = conc_calbindin*calbindin_h0m0_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h0m1_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h0m1
+   CONCENTRATION = conc_calbindin*calbindin_h0m1_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h0m2_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h0m2
+   CONCENTRATION = conc_calbindin*calbindin_h0m2_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h1m0_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h1m0
+   CONCENTRATION = conc_calbindin*calbindin_h1m0_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h1m1_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h1m1
+   CONCENTRATION = conc_calbindin*calbindin_h1m1_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h1m2_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h1m2
+   CONCENTRATION = conc_calbindin*calbindin_h1m2_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h2m0_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h2m0
+   CONCENTRATION = conc_calbindin*calbindin_h2m0_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h2m1_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h2m1
+   CONCENTRATION = conc_calbindin*calbindin_h2m1_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  calbindin_h2m2_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = calbindin_h2m2
+   CONCENTRATION = conc_calbindin*calbindin_h2m2_fraction
+   RELEASE_PROBABILITY = 1
+  }
+  ncx_p0_post_spine_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_spine_head] + Scene.d001[dendrite_spine_neck]
+   MOLECULE = ncx_p0'
+   DENSITY = density_ncx_post_spine*(1-ncx_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  ncx_p1_post_spine_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_spine_head] + Scene.d001[dendrite_spine_neck]
+   MOLECULE = ncx_p1'
+   DENSITY = density_ncx_post_spine*ncx_bound_frac
+   RELEASE_PROBABILITY = 1
+  }
+  ncx_p0_post_shaft_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_shaft_membrane]
+   MOLECULE = ncx_p0'
+   DENSITY = density_ncx_post_shaft*(1-ncx_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  ncx_p1_post_shaft_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_shaft_membrane]
+   MOLECULE = ncx_p1'
+   DENSITY = density_ncx_post_shaft*(ncx_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  cbp_c0_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = cbp_c0
+   CONCENTRATION = conc_cbp_post*(1-cbp_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  cbp_c1_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001
+   MOLECULE = cbp_c1
+   CONCENTRATION = conc_cbp_post*(cbp_bound_frac)
+   RELEASE_PROBABILITY = 1
+  }
+  ampar_c0_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_spine_psd]
+   MOLECULE = ampar_c0'
+   DENSITY = density_ampar_post_psd
+   RELEASE_PROBABILITY = 1
+  }
+  nmdar_c0_post_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_spine_psd]
+   MOLECULE = nmdar_c0'
+   DENSITY = density_nmdar_post_psd
+   RELEASE_PROBABILITY = 1
+  }
+  vdcc_c0_post_spine_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_spine_head] + Scene.d001[dendrite_spine_neck]
+   MOLECULE = vdcc_post_c0'
+   DENSITY = density_vdcc_post_spine
+   RELEASE_PROBABILITY = 1
+  }
+  vdcc_c0_post_shaft_rel RELEASE_SITE
+  {
+   SHAPE = Scene.d001[dendrite_shaft_membrane]
+   MOLECULE = vdcc_post_c0'
+   DENSITY = density_vdcc_post_shaft
+   RELEASE_PROBABILITY = 1
+  }
+  glu_test_release RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.251]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 0*(2000)
+   RELEASE_PROBABILITY = 1
+  }
+  snares_pre_rel RELEASE_SITE
+  {
+   SHAPE = LIST
+   SITE_DIAMETER = 0.05
+   MOLECULE_POSITIONS
+   {
+     snare_s0a0_en_v' [0, 0, -0.25]
+     snare_s0a0_en_v' [0.0350000001490116, 0, -0.25]
+     snare_s0a0_en_v' [-0.0350000001490116, 0, -0.25]
+     snare_s0a0_en_v' [0.0175000000745058, 0.0303000006824732, -0.25]
+     snare_s0a0_en_v' [-0.0175000000745058, 0.0303000006824732, -0.25]
+     snare_s0a0_en_v' [0.0175000000745058, -0.0303000006824732, -0.25]
+     snare_s0a0_en_v' [-0.0175000000745058, -0.0303000006824732, -0.25]
+   }
+   RELEASE_PROBABILITY = 1
+  }
+  glu_snare_driven_rel_s5a0 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 2000
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = sync_rel_s5a0
+  }
+  refrac_pre_rel_s5a0 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = refrac
+   NUMBER_TO_RELEASE = 6
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = sync_rel_s5a0
+  }
+  glu_snare_driven_rel_s5a1 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 2000
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = sync_rel_s5a1
+  }
+  glu_snare_driven_rel_s5a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 2000
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = sync_rel_s5a2
+  }
+  glu_snare_driven_rel_s0a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 2000
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s0a2
+  }
+  glu_snare_driven_rel_s1a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 2000
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s1a2
+  }
+  glu_snare_driven_rel_s2a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 2000
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s2a2
+  }
+  glu_snare_driven_rel_s3a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 2000
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s3a2
+  }
+  glu_snare_driven_rel_s4a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, 0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = glu
+   NUMBER_TO_RELEASE = 2000
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s4a2
+  }
+  refrac_pre_rel_s5a1 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = refrac
+   NUMBER_TO_RELEASE = 6
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = sync_rel_s5a1
+  }
+  refrac_pre_rel_s5a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = refrac
+   NUMBER_TO_RELEASE = 6
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = sync_rel_s5a2
+  }
+  refrac_pre_rel_s0a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = refrac
+   NUMBER_TO_RELEASE = 6
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s0a2
+  }
+  refrac_pre_rel_s1a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = refrac
+   NUMBER_TO_RELEASE = 6
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s1a2
+  }
+  refrac_pre_rel_s2a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = refrac
+   NUMBER_TO_RELEASE = 6
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s2a2
+  }
+  refrac_pre_rel_s3a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = refrac
+   NUMBER_TO_RELEASE = 6
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s3a2
+  }
+  refrac_pre_rel_s4a2 RELEASE_SITE
+  {
+   SHAPE = SPHERICAL
+   LOCATION = [0, 0, -0.001]
+   SITE_DIAMETER = 0
+   MOLECULE = refrac
+   NUMBER_TO_RELEASE = 6
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = async_rel_s4a2
+  }
+}
+
