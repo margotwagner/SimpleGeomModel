@@ -1,0 +1,36 @@
+How to use Hopper:
+
+1. Make sure whichever computer you are planning to ssh from has the key added to Tom's hopper account 
+      mwagner@hitzig.salk.edu does
+      Note: to find ssh key, from home cd .ssh and cat id_rsa.pub (visible from home with ls -a)
+
+2. ssh bartol@hopper.caltech.edu
+      Determine where the project will live
+      Currently mcell_projects/margot/p_sweep_example
+
+3. Move dir containing jobs to run and relevant files with rsync
+      ie rsync -av p_sweep_example bartol@hopper.caltech.edu:/panfs/ds07/mcell/bartol/margot/
+
+4. Create setup script to run project (setup.py)
+      - Initialize using #!/usr/bin/env python
+      - Build cmd to be run repeatedly
+      - eg
+
+      '''
+      #!/usr/bin/env python
+
+      import glob
+      import os
+
+      dirs = sorted(glob.glob("psweep_num_*/dist_*"))
+
+      for d in dirs:
+        cmd = '(cd ./%s/ ; pbs_run_mcell_range.py "1:1000" 16 Scene.main.mdl)' % d
+        print(cmd)
+        os.system(cmd)
+      '''
+
+5. Run setup.py
+
+6. rsync data back to main computer
+  - ie use rsync -av p_sweep_example mwagner@hitzig.salk.edu:/home/mwagner/projects/mcell/models/basic_simple_geom/ 
