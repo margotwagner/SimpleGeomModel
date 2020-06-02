@@ -1,10 +1,12 @@
+#!/opt/python/bin/python3
 import os
 import numpy as np
 
 number_vdcc_pre = np.arange(10, 210, 10)
 vdcc_pre_lc = np.arange(0.025, 0.425, 0.025)
+n_seeds = 1000
 
-parent_dir = '.'
+parent_dir = './output_data'
 
 instant_file = 'Scene.instantiation.mdl'
 par_file = 'Scene.parameters.mdl'
@@ -34,6 +36,11 @@ for num_vdcc in number_vdcc_pre:
         path = os.path.join(parent_dir, 'psweep_num_{0:03d}/dist_{1:03d}'.format(num_vdcc, int(dist_vdcc*1000)))
         if not os.path.exists(path):
             os.makedirs(path)
+
+        for seed in range(n_seeds):
+            seed_path = os.path.join(path, 'react_data', 'seed_{:05d}'.format(seed+1))
+            if not os.path.exists(seed_path):
+                os.makedirs(seed_path)
 
         sceneList = [i for i in os.listdir(parent_dir) if 'Scene' in i]
         for scene in sceneList:
