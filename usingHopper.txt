@@ -33,4 +33,5 @@ How to use Hopper:
 5. Run setup.py
 
 6. rsync data back to main computer
-  - ie use rsync -av p_sweep_example mwagner@hitzig.salk.edu:/home/mwagner/projects/mcell/models/basic_simple_geom/ 
+  - ie use rsync -av p_sweep_example mwagner@hitzig.salk.edu:/nadata/cnl/mcell/mwagner/
+  - Move to MCell data location /nadata/cnl/mcell/
