@@ -13,10 +13,11 @@ def vdcc_psweep_fig(path):
     path: path where stats are kept
     '''
     os.chdir(path)
+    print(os.getcwd())
     fig, ax = plt.subplots(1, 2, figsize = (18, 6))
     
     # Open vdcc stats files
-    for file in glob.glob('vdcc*.csv'):
+    for file in glob.glob('n_*_stats.csv'):
         stats = pd.read_csv(file)
         stats.columns = stats.columns.str.replace(' ', '')
         stats.columns = stats.columns.str.replace('#', '')
@@ -38,6 +39,6 @@ def vdcc_psweep_fig(path):
             ax[i].set_title('Release probability for various VDCC numbers and distances')
     
     print('Figure creation complete.')
-    plt.savefig('vdcc_psweep.png')
+    plt.savefig('suhita_stats.png')
 
-vdcc_psweep_fig('.')
+vdcc_psweep_fig('./stats')
